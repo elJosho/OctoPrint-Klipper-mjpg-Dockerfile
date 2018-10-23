@@ -96,7 +96,7 @@ RUN git clone https://github.com/KevinOConnor/klipper
 
 RUN ./klipper/scripts/install-octopi.sh
 
-RUN cp klipper/config/printer-anet-a8-2017.cfg /home/octoprint/printer.cfg
+RUN cp klipper/config/generic-smoothieboard.cfg /home/octoprint/printer.cfg
 
 USER root
 
