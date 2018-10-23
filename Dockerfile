@@ -104,4 +104,4 @@ COPY start.py /
 
 COPY start.sh /
 
-CMD ["/start.sh"]
+CMD ["sh ./start.sh"]
