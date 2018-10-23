@@ -3,7 +3,7 @@ FROM python:2.7
 EXPOSE 8080
 
 RUN apt-get update && \
-    apt-get install -y cmake libjpeg62-turbo-dev g++ wget unzip psmisc
+    apt-get install -y cmake libjpeg62-turbo-dev g++ wget unzip psmisc socat
 
 RUN cd /tmp/ && \
     wget https://github.com/jacksonliam/mjpg-streamer/archive/master.zip && \
@@ -102,4 +102,6 @@ USER root
 
 COPY start.py /
 
-CMD ["/start.py"]
+COPY start.sh /
+
+CMD ["/start.sh"]
